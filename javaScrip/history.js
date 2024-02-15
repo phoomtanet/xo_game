@@ -76,19 +76,22 @@ function displayTableHis(matrix, moves) {
       var cell = row.insertCell();
 
       var button = document.createElement("button");
-      button.style.width = "60px";
-      button.style.height = "60px";
+
       button.textContent = "-";
       var buttonId = "" + i + "" + j + "";
       button.id = buttonId;
-       var status = button.title = buttonId;
-
-      // console.log("Button ID:", buttonId);
-
-      // Call createButtonClickHandler for each button
-     if(status){
-      // createButtonClickHandlerHis(matrix, button, moves, buttonId);
+      if(matrix.length < 10 ){
+        button.style.width = "100px";
+        button.style.height = "100px";
+    }else if(matrix.length < 20 ){
+      button.style.width = "60px";
+      button.style.height = "60px";
+    }else{
+      button.style.width = "40px";
+      button.style.height = "40px";
+      
     }
+console.log("matrix"+matrix.length);
       cell.appendChild(button);
     }
 

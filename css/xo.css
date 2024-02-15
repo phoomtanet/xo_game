@@ -1,0 +1,91 @@
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    30deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(7, 33, 178, 0.8617021276595744) 25%,
+    rgba(76, 24, 193, 0.6569148936170213) 49%,
+    rgba(190, 9, 218, 0.8457446808510638) 73%,
+    rgba(3, 0, 0, 1) 100%
+  );
+}
+#field {
+  background: rgb(40, 40, 40);
+  background: linear-gradient(
+    0deg,
+    rgba(40, 40, 40, 0.6914893617021276) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100%;
+  margin: 20px;
+  border-radius: 15px;
+  height: 100%;
+}
+
+#displayArea {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    133deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+#Player {
+  color: white;
+}
+#spanPlayer {
+  color: red;
+}
+#text {
+  color: white;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    133deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+#saveButton {
+  padding: 5px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: rgb(22, 104, 192);
+  cursor: pointer;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+#hisBn{
+
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: rgb(8, 122, 10);
+    cursor: pointer;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#inputText {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 55px;
+}
+
+#inputText:focus {
+    border-color: #4CAF50;
+}
+#textSize{
+    font-size: 25px;
+color: rgb(243, 9, 133);
+}

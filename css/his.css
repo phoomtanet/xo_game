@@ -1,0 +1,65 @@
+
+#showPlaybar{
+
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: rgb(10, 130, 243);
+    cursor: pointer;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+#selectData {
+    padding: 5px ,15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#selectData option {
+    background-color: #fff;
+    color: #333;
+    margin-left: 10px;
+}
+
+#selectData:hover,
+#selectData:focus {
+    border-color: #4CAF50; 
+}
+
+#skip , #decrement{
+    padding: 5px ,10px;
+    font-size: 16px;
+    background-color: #dbdbdb;
+   color: #1c6602;
+
+}
+#skip:hover , #decrement:hover{
+    background-color: #ffffff;
+
+
+}
+
+#skip:disabled,
+#decrement:disabled {
+    background-color: #494646; 
+    cursor: not-allowed; 
+    color: rgb(115, 10, 10);
+}
+
+#buttonContainer {
+    text-align: center;
+}
+
+
+#count{
+            font-size: 20px;
+            margin: 5px;
+            color: rgb(240, 182, 7);
+}
