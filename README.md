@@ -1,1 +1,1 @@
-![image](https://github.com/phoomtanet/xo_game/assets/143348885/d95235bb-9477-403c-8dc3-cb0dbdb17c89)
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/ff6d91e6-e9f3-4cde-83ea-f76cd3e684ba)
