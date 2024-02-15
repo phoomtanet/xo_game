@@ -24,27 +24,34 @@ $rs_xo = mysqli_query($conn, $sql_xo);
   <div class="d-flex p-2 bd-highlight bg-primary justify-content-center">
     <input class="mx-2" type="number" id="inputText" value="3" min="3" />
     <button id="saveButton" onclick="createTable()">Save</button>
-    <button id="reset" class="mx-2" onclick="reset()">reset</button>
+    <!-- <button id="reset" class="mx-2" onclick="reset()"disabled>reset</button> -->
+    <button id="hisBn" class="mx-2" onclick="showHis()">History</button>
+
 
   </div>
 
-  <div class="d-flex p-2 bd-highlight bg-primary justify-content-center">
-    <select id="selectData" onchange="historyFunction(this.value)">
-      <option value="">เลือกประวัติการเล่น</option>
+  <div  id="hisBar"  class="d-flex p-2 bd-highlight bg-primary justify-content-center"  >
+    <select hidden id="selectData"  onchange="historyFunction(this.value)">
+      <option value="">ประวัติ</option>
       <?php foreach ($rs_xo as $row) {
-        echo '<option value="' . $row['id'] . '">' . $row['id'] . '</option>';
+        echo '<option  onclick="historyFunction(this.value)" value="' . $row['id'] . '">' . $row['id'] . '</option>';
       } ?>
     </select>
-    <button class="mx-2" id="decrement" onclick="play()">-</button>
+    <button hidden class="mx-2" id="decrement" onclick="play()" disabled>-</button>
 
-    <p id="count" value="0">0</p>
-    <button class="mx-2" id="skip" onclick="play()">+</button>
+    <p hidden id="count" value="0" >0</p>
+    <button hidden class="mx-2" id="skip" onclick="play()" disabled>+</button>
+    <button hidden id="showPlaybar" onclick="showPlaybar()">หน้าแรก</button>
 
 
+  </div>
+  <div class="d-flex p-2 bd-highlight bg-primary justify-content-center">
+     <h1><p id="player" style="display: none">player <span id="spanPlayer">X</span></p></h1>
   </div>
   <div class="d-flex p-2 bd-highlight bg-primary justify-content-center">
     <div id="displayArea"></div>
   </div>
   <script src="../javaScrip/script.js"></script>
   <script src="../javaScrip/history.js"></script>
-  <script src="../javaScrip/historyPlay.js"></script>
+  <script src="../javaScrip/historyPlay.js"></script> 
+  <script src="../javaScrip/showBar.js"></script>

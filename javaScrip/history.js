@@ -1,13 +1,24 @@
 function historyFunction(selectedId) {
+  
+  player.style.display = "none";
   document.getElementById("count").innerHTML ="0";
   document.getElementById("count").value = 0;
-  
+
   console.log("co "+document.getElementById("count").innerHTML);
+  // document.getElementById("reset").disabled = true;
+  // document.getElementById("saveButton").disabled = false;
+
+
+  
 if(document.getElementById("count").innerHTML == "0" ){
-
   document.getElementById("decrement").disabled = true;
-
+  document.getElementById("skip").disabled = false;
 }
+document.getElementById("selectData").value ;
+
+var inputValue = document.getElementById("selectData").value;
+if (inputValue>0) {
+
 
 $.ajax({
     type: "POST",
@@ -28,6 +39,12 @@ $.ajax({
     },
   });
 
+}
+else {
+  document.getElementById("displayArea").displayArea.innerHTML = "";
+  document.getElementById("skip").disabled = true;
+ 
+}
 }
 
 function createTableHis(matrixSizecol, moves) {
@@ -52,7 +69,6 @@ function displayTableHis(matrix, moves) {
   var displayArea = document.getElementById("displayArea");
   var table = document.createElement("table");
   table.style.borderCollapse = "collapse";
-  var playbuton = document.getElementById("play");
 
   for (var i = 0; i < matrix.length; i++) {
     var row = table.insertRow();

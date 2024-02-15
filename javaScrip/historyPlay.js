@@ -44,6 +44,7 @@ function playGame(moves) {
       if (move.player === "O") {
         setButton.style.color = "red";
       }
+
       console.log("Move " + index + ":", move);
 
     } else {
@@ -57,7 +58,7 @@ function playGame(moves) {
     console.log("No more moves to display. Resetting clickCount.");
     text.textContent = moves.length-1; 
     text.value =  moves.length-1; 
-  
+    document.getElementById("skip").disabled = true;
   }
 }
 
@@ -68,11 +69,17 @@ document.getElementById("skip").addEventListener("click", function() {
 }else{
   text.textContent = parseInt(text.value) + 1; 
 }
+document.getElementById("decrement").disabled = false;
 });
 
 
 document.getElementById("decrement").addEventListener("click", function () {
   if (parseInt(text.value) > 0) {
     text.textContent = parseInt(text.value) - 1;
+    document.getElementById("skip").disabled = false;
+    if(document.getElementById("count").innerHTML == "0" ){
+      document.getElementById("decrement").disabled = true;
+    }
+    
   }
 });

@@ -1,26 +1,38 @@
 var moveHistory = [];
 var currentPlayer = "X";
+var player = document.getElementById("player") ;
+var spanPlayer = document.getElementById("spanPlayer") ;
+// var saveButton = document.getElementById("saveButton");
+// var resetButton = document.getElementById("reset");
+
 
 
 function createTable() {
-  document.getElementById("saveButton").disabled = true;
-  document.getElementById("reset").disabled = true;
-    var inputValue = document.getElementById("inputText").value;
-    const inputNumber = parseInt(inputValue);
-    var matrix = [];
-    var row;
-    
-    if (!isNaN(inputNumber)&&inputNumber > 2 ) {
-      for (var i = 0; i <  inputNumber; i++) {
-        row = Array(inputNumber).fill(" ");
-        matrix.push(row);
-      }
-      displayTable(matrix);
-      console.log("input "+ inputValue);
-      console.log(matrix +"matrix");
-    } else {
-      alert("กรุณาป้อน ตัวเลข 3 ขึ้นไป");
+  var inputValue = document.getElementById("inputText").value;
+  const inputNumber = parseInt(inputValue);
+  var matrix = [];
+  var row;
+  if (!isNaN(inputNumber)&&inputNumber > 2 ) {
+    for (var i = 0; i <  inputNumber; i++) {
+      row = Array(inputNumber).fill(" ");
+      matrix.push(row);
     }
+    displayTable(matrix);
+    console.log("input "+ inputValue);
+    console.log(matrix +"matrix");
+  } else {
+    alert("กรุณาป้อน ตัวเลข 3 ขึ้นไป");
+  }
+
+  // saveButton.disabled = true;
+  // resetButton.disabled = false;
+  // document.getElementById("decrement").disabled = true;
+  // document.getElementById("skip").disabled = true;
+  player.style.display = "block";
+  // document.getElementById("opHis").innerHTML = "ประวัติ";
+
+
+
   }
 
 
@@ -29,8 +41,10 @@ function createTable() {
     moveHistory = [];
     createTable();
     currentPlayer = "X";
-    document.getElementById("saveButton").disabled = true;
-    document.getElementById("reset").disabled = false;
+    // saveButton.disabled = false;
+    // resetButton.disabled = true;
+    spanPlayer.innerHTML = "X";
+    
   
   }
   
@@ -131,6 +145,10 @@ function createTable() {
       console.log(`${st} wins`);
       sendMoveHistoryToServer(st,matrix.length); 
     
+    }else if(moveHistory.length == matrix.length*matrix.length){
+      // console.log("เสมอ  ขนาด"+matrix.length);
+      sendMoveHistoryToServer(st,matrix.length); 
+
     }
   }
   
@@ -143,16 +161,20 @@ function createTable() {
         matrix[i][j] = currentPlayer;
         const st = matrix[i][j];
         button.textContent = matrix[i][j];
-  
+      
         currentPlayer = currentPlayer === "X" ? "O" : "X";
         if (currentPlayer === "X") {
           button.style.color = "red";
+          spanPlayer.innerHTML = "X";
+
         } else {
+          spanPlayer.innerHTML = "O";
+
           button.style.color = ""; 
         }
   
        
-        console.log("st = "+st);
+        // reset.disabled = false;
   
         console.log(matrix[i][j]);
         addMoveHistory(i, j, st );
@@ -168,7 +190,7 @@ function createTable() {
   
   function addMoveHistory(i, j, player) {
     moveHistory.push({ player: player, row: i, col: j });
-    console.log(moveHistory);
+    // console.log(moveHistory);
 
   
   }
@@ -176,6 +198,7 @@ function createTable() {
 
 
   function sendMoveHistoryToServer(st,matrix) {
+
     $.ajax({
       type: 'POST',
       url: 'sql.php', 
@@ -184,8 +207,16 @@ function createTable() {
     },
       success: function (response) {
         console.log(response); 
-        reset();
-        alert(`Player ${st} wins`);
+        if(moveHistory.length == matrix*matrix){
+          alert("เสมอ");
+      }else{
+    console.log(moveHistory.length+"เสมอ  ขนาด"+matrix);
+    
+      alert(`Player ${st} wins`);
+    // location.reload();
+    }
+    reset();
+
       },
       error: function (error) {
         console.error('Error:', error);
