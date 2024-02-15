@@ -152,7 +152,7 @@ function createButtonClickHandler(i, j, matrix, button) {
         button.style.fontWeight = "bold";
         if (matrix.length < 10) {
           button.style.fontSize = "30px";
-        } else if (matrix.length < 10) {
+        } else if (matrix.length < 20) {
           button.style.fontSize = "20px";
         } else {
           button.style.fontSize = "15px";
@@ -166,7 +166,7 @@ function createButtonClickHandler(i, j, matrix, button) {
       button.style.fontWeight = "bold";
       if (matrix.length < 10) {
         button.style.fontSize = "30px";
-      } else if (matrix.length < 10) {
+      } else if (matrix.length < 20) {
         button.style.fontSize = "20px";
       } else {
         button.style.fontSize = "15px";
