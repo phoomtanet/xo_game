@@ -35,7 +35,8 @@ Download ตามขั้นตอน หรือหาก ใช้โปร
 
 วิธีออกแบบโปรแกรมและ algorithm 
 
-![image](https://github.com/phoomtanet/xo_game/assets/143348885/a8e409b7-826a-4102-92c2-aabec3d88c10)
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/001b16e0-f00a-4748-8bc6-8cbd6b5bf253)
+
 
 ในส่วนของ การออกแบบ  โดยจะกำหนดชัยชนะจากฝั่งเรียงกันได้ 3 ช่องติดกัน
 
