@@ -40,3 +40,6 @@ Download ตามขั้นตอน หรือหาก ใช้โปร
 
 ![image](https://github.com/phoomtanet/xo_game/assets/143348885/a0c216c6-3159-4774-bacf-76b68d35d368)
 
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/bbe922cc-013b-446b-af5a-3ab72a5b9e7c)
+
+
