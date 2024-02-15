@@ -41,5 +41,8 @@ Download ตามขั้นตอน หรือหาก ใช้โปร
 ![image](https://github.com/phoomtanet/xo_game/assets/143348885/a0c216c6-3159-4774-bacf-76b68d35d368)
 
 ![image](https://github.com/phoomtanet/xo_game/assets/143348885/7a6179d9-ca92-454d-b11f-e0bc51c41d4d)
+การออกแบบการเก็ยข้อมูล ในdata base จะ เก็บ ข้อมูลการคลิ้กแต่ละครั้ง ใน ตาราง moves ข้อมูลเป็บแบบjson  และบันทึกขนาดตารางใน matrixSize
+
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/b6e30207-f0fb-4393-a3c7-3d8d3b789e3b)     
 
 
