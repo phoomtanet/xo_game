@@ -38,9 +38,5 @@ Download ตามขั้นตอน หรือหาก ใช้โปร
 ![image](https://github.com/phoomtanet/xo_game/assets/143348885/001b16e0-f00a-4748-8bc6-8cbd6b5bf253)
 
 
-ในส่วนของ การออกแบบ  โดยจะกำหนดชัยชนะจากฝั่งเรียงกันได้ 3 ช่องติดกัน
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/a0c216c6-3159-4774-bacf-76b68d35d368)
 
-
- 
-
-![image](https://github.com/phoomtanet/xo_game/assets/143348885/ff6d91e6-e9f3-4cde-83ea-f76cd3e684ba)
