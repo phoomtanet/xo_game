@@ -25,7 +25,8 @@ Download ตามขั้นตอน หรือหาก ใช้โปร
 จากนั้นเป็ด terminal คัดลอก git clone https://github.com/phoomtanet/xo_game.git
 ลงใน terminal
  
-6.จากนั้น เบราว์เซอร์ พิมพ์  url  http://localhost/ ตามด้วย ที่อยู่ของไฟล์โปรแกรม
+6.จากนั้น เบราว์เซอร์ พิมพ์  url  http://localhost/ ตามด้วย ที่อยู่ของไฟล์โปรแกรม เช่น 
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/f0593f2c-60fb-4afa-a851-ff186b6970bb)
 
 
 
