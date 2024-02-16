@@ -30,9 +30,20 @@ Download ตามขั้นตอน หรือหาก ใช้โปร
 
 
 
-ในส่วนของ การออกแบบ  โดยจะกำหนดชัยชนะจากฝั่งเรียงกันได้ 3 ช่องติดกัน
 
 
- 
 
-![image](https://github.com/phoomtanet/xo_game/assets/143348885/ff6d91e6-e9f3-4cde-83ea-f76cd3e684ba)
+วิธีออกแบบโปรแกรมและ algorithm 
+
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/001b16e0-f00a-4748-8bc6-8cbd6b5bf253)
+
+
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/a0c216c6-3159-4774-bacf-76b68d35d368)
+
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/7a6179d9-ca92-454d-b11f-e0bc51c41d4d)
+การออกแบบการเก็ยข้อมูล ในdata base จะ เก็บ ข้อมูลการคลิ้กแต่ละครั้ง ใน ตาราง moves ข้อมูลเป็บแบบjson  และบันทึกขนาดตารางใน matrixSize
+
+![image](https://github.com/phoomtanet/xo_game/assets/143348885/b6e30207-f0fb-4393-a3c7-3d8d3b789e3b)     
+
+
+ถ้ามีการปรับปรุงเพิ่มเติมก้อย่าจะ เพิ่ม การ login และ การสมัครผู้ใช้
